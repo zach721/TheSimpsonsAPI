@@ -38,8 +38,6 @@ let api = {
     }
     
 
-app.get('/', function (req, res) {
+export default app.get('/', function (req, res) {
   res.send(api)
 })
-
-module.exports = app
