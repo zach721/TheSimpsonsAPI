@@ -25,6 +25,26 @@ axios.get(url)
   })
 
 ```
+## Using Python
+
+```python
+import json
+import requests
+from types import SimpleNamespace
+
+x = requests.get('https://thesimpsonsapi.vercel.app')
+Simpson = x.text
+theSimpsons = json.loads(Simpson, object_hook=lambda d: SimpleNamespace(**d))
+
+
+
+print(theSimpsons.homer)
+print(theSimpsons.marge)
+print(theSimpsons.bart)
+print(theSimpsons.lisa)
+print(theSimpsons.maggie)
+
+```
 
 # Link here
 https://thesimpsonsapi.vercel.app/
