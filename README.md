@@ -44,6 +44,8 @@ print(theSimpsons.homer)
 print(theSimpsons.homer.name)
 # Get age
 print(theSimpsons.homer.age)
+# Get url image
+print(theSimpsons.homer.url)
 # Get description
 print(theSimpsons.homer.descriptiom)
 #You can try with other characters too!
