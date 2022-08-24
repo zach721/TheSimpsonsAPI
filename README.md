@@ -34,6 +34,7 @@ from types import SimpleNamespace
 
 x = requests.get('https://thesimpsonsapi.vercel.app')
 Simpson = x.text
+# Convert json to Python object
 theSimpsons = json.loads(Simpson, object_hook=lambda d: SimpleNamespace(**d))
 
 
