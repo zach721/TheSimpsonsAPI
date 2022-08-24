@@ -37,12 +37,20 @@ Simpson = x.text
 theSimpsons = json.loads(Simpson, object_hook=lambda d: SimpleNamespace(**d))
 
 
+# Access all Homer's data
+print(theSimpsons.homer) 
+# Get name
+print(theSimpsons.homer.name)
+# Get age
+print(theSimpsons.homer.age)
+# Get description
+print(theSimpsons.homer.descriptiom)
+#You can try with other characters too!
+print(theSimpsons.marge) #Access Marge's object 
+print(theSimpsons.bart) #Access Bart's object
+print(theSimpsons.lisa) #Access Lisa's object
+print(theSimpsons.maggie) #Access Maggie's object
 
-print(theSimpsons.homer)
-print(theSimpsons.marge)
-print(theSimpsons.bart)
-print(theSimpsons.lisa)
-print(theSimpsons.maggie)
 
 ```
 
