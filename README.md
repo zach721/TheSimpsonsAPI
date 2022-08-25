@@ -1,29 +1,27 @@
 ## Using Axios
 ```javascript
+onst axios = require('axios')
 
-const axios = require('axios')
-
-let url = 'https://thesimpsonsapi.vercel.app'
-
-axios.get(url)
+// Make a request for a user with a given ID
+axios.get('https://thesimpsonsapi.vercel.app')
   .then(function (res) {
+    let thesimpsons = res.data
     // Access all Homer's data
-    console.log(res.data.homer)
+    console.log(thesimpsons.homer)
     // Get name
-    console.log(res.data.homer.name)
+    console.log(thesimpsons.homer.name)
     // Get age
-    console.log(res.data.homer.age)
+    console.log(thesimpsons.homer.age)
     // Get url image
-    console.log(res.data.homer.img)
+    console.log(thesimpsons.homer.img)
     // Get description
-    console.log(res.data.homer.description)
+    console.log(thesimpsons.homer.description)
     //You can try with other characters too!
-    console.log(res.data.marge) //Access Marge's object
-    console.log(res.data.bart) //Access Bart's object
-    console.log(res.data.lisa) //Access Lisa's object
-    console.log(res.data.maggie) //Access Maggie's object
+    console.log(thesimpsons.marge) //Access Marge's object
+    console.log(thesimpsons.bart) //Access Bart's object
+    console.log(thesimpsons.lisa) //Access Lisa's object
+    console.log(thesimpsons.maggie) //Access Maggie's object
   })
-
 ```
 ## Using Python
 
