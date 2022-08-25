@@ -1,6 +1,6 @@
 ## Using Axios
 ```javascript
-onst axios = require('axios')
+const axios = require('axios')
 
 // Make a request for a user with a given ID
 axios.get('https://thesimpsonsapi.vercel.app')
