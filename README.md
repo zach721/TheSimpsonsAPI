@@ -120,7 +120,7 @@ fn main() {
     // Get description
     println(thesimpsons.homer.description)
     //You can try with other characters too!
-	println(thesimpsons.marge) //Access Marge's object
+    println(thesimpsons.marge) //Access Marge's object
     println(thesimpsons.bart) //Access Bart's object
     println(thesimpsons.lisa) //Access Lisa's object
     println(thesimpsons.maggie) //Access Maggie's object
