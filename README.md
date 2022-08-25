@@ -59,71 +59,79 @@ print(theSimpsons.maggie) #Access Maggie's object
 import net.http
 import json
 
-//We're creating a struct to parse our json
-//into an object
+// We're creating a struct to parse our json
+// into an object
 struct User {
-	 homer struct{
-		name string
-		age string
-		img string
+	homer struct  {
+		name        string
+		age         string
+		img         string
 		description string
 	}
-	marge struct{
-		name string
-		age string
-		img string
+
+	marge struct  {
+		name        string
+		age         string
+		img         string
 		description string
 	}
-	bart struct{
-		name string
-		age string
-		img string
+
+	bart struct  {
+		name        string
+		age         string
+		img         string
 		description string
 	}
-	lisa struct{
-		name string
-		age string
-		img string
+
+	lisa struct  {
+		name        string
+		age         string
+		img         string
 		description string
 	}
-	maggie struct{
-		name string
-		age string
-		img string
+
+	maggie struct  {
+		name        string
+		age         string
+		img         string
 		description string
 	}
 }
 
 fn main() {
-
-
-    //Making a get call and storing the value
-	//into a variabe
+	// Making a get call and storing the value
+	// into a variabe
 	response := http.get('https://thesimpsonsapi.vercel.app') or {
 		println('failed to fetch data from the server')
 		return
 	}
-	//Decoding our response from json to an object
-	mut thesimpsons := json.decode(User,response.body) or {
+
+	// Decoding our response from json to an object
+	mut thesimpsons := json.decode(User, response.body) or {
 		eprintln('Failed to parse json')
 		return
 	}
-	
-    //Access all Homer's data
-    println(thesimpsons.homer)
-    // Get name
-    println(thesimpsons.homer.name)
-    // Get age
-    println(thesimpsons.homer.age)
-    // Get url image
-    println(thesimpsons.homer.img)
-    // Get description
-    println(thesimpsons.homer.description)
-    //You can try with other characters too!
-    println(thesimpsons.marge) //Access Marge's object
-    println(thesimpsons.bart) //Access Bart's object
-    println(thesimpsons.lisa) //Access Lisa's object
-    println(thesimpsons.maggie) //Access Maggie's object
+
+	// Access all Homer's data
+	println(thesimpsons.homer)
+
+	// Get name
+	println(thesimpsons.homer.name)
+
+	// Get age
+	println(thesimpsons.homer.age)
+
+	// Get url image
+	println(thesimpsons.homer.img)
+
+	// Get description
+	println(thesimpsons.homer.description)
+
+	// You can try with other characters too!
+	println(thesimpsons.marge) // Access Marge's object
+	println(thesimpsons.bart) // Access Bart's object
+	println(thesimpsons.lisa) // Access Lisa's object
+	println(thesimpsons.maggie) // Access Maggie's object
 }
 
 ```
