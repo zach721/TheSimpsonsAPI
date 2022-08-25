@@ -110,8 +110,8 @@ fn main() {
 	}
 	
     //Access all Homer's data
-	println(thesimpsons.homer)
-	// Get name
+    println(thesimpsons.homer)
+    // Get name
     println(thesimpsons.homer.name)
     // Get age
     println(thesimpsons.homer.age)
